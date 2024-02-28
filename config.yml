@@ -1,6 +1,15 @@
 extract_to: .
 
-Video_html_Code_Snippet:  '<br><div style="position: relative; display: flex; justify-content: center; align-items: center;"><video playsinline="" controls="" preload="metadata" src="{new_link}" style="display: block; width: 80%; background-color: rgba(255, 255, 255, 0.03);"></video></div><br>'
+Video_html_Code_Snippet: |
+    <br>
+    <div style="position: relative; display: flex; justify-content: center; align-items: center;">
+        <video playsinline=""
+            controls="" preload="metadata" src="{new_link}"
+            style="display: block; width: 80%; background-color: rgba(255, 255, 255, 0.03);">
+        </video>
+    </div>
+    <br>
+
 
 
 html_Head_Code_Snippet: |
