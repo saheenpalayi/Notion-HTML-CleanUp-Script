@@ -55,6 +55,14 @@ def rename_folder_and_html(folder_path, old_folder_name):
     print(f"File '{old_folder_name}.html' renamed to '{new_folder_name}.html'")
     return new_html_file_path
 
+
+
+def replace_and_write_path(path):
+    modified_path = path.replace("%26", "&amp;")
+    print("Modified path:", modified_path)
+    return modified_path
+
+
 def find_replace_html_file(html_file, old_path, new_path):
     try:
         # Open the HTML file for reading
@@ -229,7 +237,10 @@ if __name__ == "__main__":
     print(new_folder_name)
     html_file = html_file_path
     old_path = urllib.parse.quote(unique_id_folder_name) +'/'
-    print(old_path)
+
+    # print("this is before: "+old_path)
+    old_path = replace_and_write_path(old_path)
+    # print("this is after: "+old_path)
     new_path = new_folder_name+'/'
     find_replace_html_file(html_file, old_path, new_path)
 
